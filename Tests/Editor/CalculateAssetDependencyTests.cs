@@ -122,6 +122,7 @@ namespace UnityEditor.Build.Pipeline.Tests
         }
 
         [SetUp]
+        [Obsolete]
         public void Setup()
         {
             m_PrevMode = EditorSettings.spritePackerMode;
@@ -144,6 +145,7 @@ namespace UnityEditor.Build.Pipeline.Tests
             AssetDatabase.Refresh();
         }
 
+        [Obsolete]
         static void CreateTestSpriteTexture(string texturePath, bool single)
         {
             var data = ImageConversion.EncodeToPNG(new Texture2D(32, 32));
@@ -424,6 +426,7 @@ namespace UnityEditor.Build.Pipeline.Tests
 
         [TestCaseSource("SpriteTestCases")]
         [Test]
+        [Obsolete]
         public void WhenSpriteWithAtlas_SpriteImportDataCreated(SpritePackerMode spriteMode, string spritePackingTag, bool hasReferencingSpriteAtlas, bool expectedPacked)
         {
             TextureImporter importer = AssetImporter.GetAtPath(kTestAsset) as TextureImporter;

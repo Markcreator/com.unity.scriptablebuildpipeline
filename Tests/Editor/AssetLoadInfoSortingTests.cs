@@ -16,6 +16,7 @@ namespace UnityEditor.Build.Pipeline.Tests
         const string kTestAsset = "Assets/TestAssets/SpriteTexture32x32.png";
 
         [OneTimeSetUp]
+        [System.Obsolete]
         public void OneTimeSetUp()
         {
             Directory.CreateDirectory(kTestAssetFolder);
@@ -30,6 +31,7 @@ namespace UnityEditor.Build.Pipeline.Tests
             AssetDatabase.Refresh();
         }
 
+        [System.Obsolete]
         static void CreateTestSpriteTexture()
         {
             var data = ImageConversion.EncodeToPNG(new Texture2D(32, 32));
